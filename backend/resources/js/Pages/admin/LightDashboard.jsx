@@ -5,7 +5,7 @@ import AppLayout from '../../layouts/AppLayout';
 const statusLabels={PENDING:'待接单',ACCEPTED:'已接单',IN_PROGRESS:'生产中',BLOCKED:'受阻',PAUSED:'已暂停',CHANGE_HOLD:'变更暂停'};
 export default function LightDashboard({overview,recentOrders,recentIssues,refreshedAt}) {
  const {knowledgeAssistEnabled}=usePage().props;
- return <><Head title="生产概览 · 轻舟"/><div className="lp-dashboard">
+ return <><Head title="生产概览 · 智造协同"/><div className="lp-dashboard">
   <div className="lp-page-heading"><div><div className="lp-eyebrow">PRODUCTION & SUPPLY CHAIN / OVERVIEW</div><h1>把生产计划与供应风险放在一起看。</h1><p>从物料需求到工单进度，快速定位需要跟进的事项。</p></div><button className="lp-button secondary" onClick={()=>router.reload({only:['overview','recentOrders','recentIssues','refreshedAt']})}><RefreshCw size={15}/>刷新数据</button></div>
   <div className="lp-metrics">{[['进行中的工单',overview.active,'未完成 / 未取消'],['正在生产',overview.running,'已进入执行阶段'],['受阻工单',overview.blocked,'等待处置或变更'],['待处理异常',overview.issues ?? '—','未处理 / 已确认']].map(([title,value,caption],i)=><div className="lp-metric" key={title}><div><span>{title}</span><span className="lp-metric-index">0{i+1}</span></div><strong>{value}</strong><small>{caption}</small></div>)}</div>
   <div className="lp-board-grid"><section className="lp-panel"><div className="lp-panel-heading"><div><span className="lp-eyebrow">ORDER FLOW</span><h2>工单推进</h2></div><Link href="/admin/work-orders">全部工单 <ArrowRight size={15}/></Link></div>

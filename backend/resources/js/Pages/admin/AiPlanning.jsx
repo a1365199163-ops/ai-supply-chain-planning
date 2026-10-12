@@ -43,7 +43,7 @@ export default function AiPlanning({ planning, refreshedAt }) {
     }
 
     const metrics = planning.metrics;
-    return <><Head title="AI 供应链计划 · 轻舟"/><div className="lp-dashboard lp-planning">
+    return <><Head title="AI 供应链计划 · 智造协同"/><div className="lp-dashboard lp-planning">
         <div className="lp-page-heading">
             <div><div className="lp-eyebrow">AI SUPPLY CHAIN / PLANNING COPILOT</div><h1>让物料需求与生产计划对得上。</h1><p>结合工单、BOM、库存和交期，识别供应缺口与计划关注项。</p></div>
             <div className="lp-plan-heading-actions"><div className="lp-horizon-select" aria-label="计划周期">{[[7, '周视图'], [30, '月视图'], [90, '季度']].map(([days, label]) => <button type="button" key={days} className={planning.period.days === days ? 'active' : ''} onClick={() => router.get('/admin/ai-planning', { horizon: days }, { preserveScroll: true, preserveState: true })}>{label}</button>)}</div><Link className="lp-button secondary" href="/admin/schedule">排产计划 <ArrowRight size={14}/></Link><button className="lp-button secondary" onClick={() => router.reload({ only: ['planning', 'refreshedAt'] })}><RefreshCw size={15}/>刷新</button></div>

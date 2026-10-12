@@ -1,12 +1,12 @@
 import { Link, usePage } from '@inertiajs/react';
 import { useState } from 'react';
 import { ToastProvider } from '@openmes/ui';
-import { LayoutDashboard, ClipboardList, Activity, CircleAlert, BookOpen, Settings2, ArrowUpRight, LogOut, Menu, Sailboat, Sparkles } from 'lucide-react';
+import { LayoutDashboard, ClipboardList, Activity, CircleAlert, BookOpen, Settings2, ArrowUpRight, LogOut, Menu, Factory, Sparkles } from 'lucide-react';
 import { LiveShapesProvider } from '../components/LiveShapesProvider';
 import '../../css/light-production.css';
 
 export function LightBrand() {
-    return <span className="lp-brand"><span className="lp-mark"><Sailboat size={25}/></span><span>轻舟<small>生产协同 · FLOW</small></span></span>;
+    return <span className="lp-brand"><span className="lp-mark"><Factory size={23}/></span><span>智造协同<small>生产管理工作台</small></span></span>;
 }
 
 export default function LightShell({ children }) {

@@ -22,7 +22,7 @@
 
 ---
 
-## Personal project work: Qingzhou production collaboration
+## Personal project work: Smart manufacturing collaboration
 
 This repository keeps the original OpenMES project and its AGPL-3.0 license and attribution. My project work adds a lightweight Chinese production workspace and an AI supply-chain planning assistant for manufacturing planning scenarios.
 
@@ -31,7 +31,7 @@ This repository keeps the original OpenMES project and its AGPL-3.0 license and 
 - Implements an assistant flow with intent routing, read-only MRP and delivery-risk tools, evidence-based suggestions, and an optional OpenAI-compatible tool-calling adapter. Local rules remain available when no model endpoint is configured.
 - Keeps planning suggestions read-only; schedule changes and purchasing decisions remain with the user.
 
-The implementation and validation scope is documented in [轻舟-改造说明.md](./轻舟-改造说明.md). This is a local portfolio project; no hosted demo or production AI credentials are included.
+The implementation and validation scope is documented in [智造协同-项目说明.md](./智造协同-项目说明.md). This is a local portfolio project; no hosted demo or production AI credentials are included.
 
 ---
 
